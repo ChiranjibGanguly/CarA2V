@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/_5sdp">
+
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/itemModelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="Adadad"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textSmallSize"
+                android:fontFamily="@font/lato_regular"/>
+
+            <TextView
+                android:id="@+id/itemPlateNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:fontFamily="@font/lato_bold"
+                android:text=""
+                android:textColor="@color/OnlnServiceTxt"
+                android:textSize="@dimen/textSmallSize" />
+        </RelativeLayout>
+
+        <!--<TextView
+            android:id="@+id/itemVinCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Adadad"
+            android:textColor="@color/OnlnServiceTxt"
+            android:textSize="@dimen/textTabSize" />-->
+       <View
+           android:id="@+id/divider"
+           android:layout_width="match_parent"
+           android:layout_height=".8dp"
+           android:visibility="visible"
+           android:background="@color/colorAddBgStroke"
+           android:layout_marginTop="@dimen/_9sdp"/>
+    </LinearLayout>
+</LinearLayout>

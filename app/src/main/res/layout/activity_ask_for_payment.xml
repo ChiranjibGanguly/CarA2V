@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/quotedRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/colorAddBgStroke" />
+
+            <LinearLayout
+                android:id="@+id/bellowLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Total Part Charges"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/partChargeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/partChargeTxt"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Total Labor Charges"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/laborChargeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/partChargeTxt"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/laborChargeTxt"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Total Flat Charges"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/flateChargeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/laborChargeTxt"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/labView"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@id/flateChargeTxt"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/colorAddBgStroke" />
+
+                <RelativeLayout
+                    android:id="@+id/taxLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/taxx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Tax"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/percn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="%"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/taxTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toLeftOf="@id/percn"
+                        android:fontFamily="@font/lato_bold"
+                        android:padding="@dimen/_2sdp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+
+                    <View
+                        android:id="@+id/taxView"
+                        android:layout_width="match_parent"
+                        android:layout_height=".8dp"
+                        android:layout_below="@id/taxx"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@color/colorAddBgStroke" />
+
+
+                    <TextView
+                        android:id="@+id/adcom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/taxView"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Admin Commission"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/adminComTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/taxView"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <View
+                        android:id="@+id/adcomView"
+                        android:layout_width="match_parent"
+                        android:layout_height=".8dp"
+                        android:layout_below="@id/adcom"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/colorAddBgStroke" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/cpnUpLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Apply Coupon"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/textNormalSize" />
+
+                        <LinearLayout
+                            android:id="@+id/cupnBtnlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_5sdp">
+
+                            <Button
+                                android:id="@+id/applyCupn"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:background="@drawable/rounded_corner_blue_bg"
+                                android:text="apply"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textExtraSmallSize"
+                                android:visibility="visible"/>
+
+                            <ProgressBar
+                                android:id="@+id/smlProgress"
+                                style="@android:style/Widget.ProgressBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:progressTint="@color/colorPrimaryDark"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/cupnTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_toLeftOf="@id/cupnBtnlay"
+                            android:background="@drawable/green_roundcorner_bg"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:minWidth="@dimen/_70sdp"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlueText"
+                            android:inputType="text|textCapCharacters"
+                            android:maxLength="6"
+                            android:textSize="@dimen/textNormalSize"
+                            android:padding="@dimen/_2sdp"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/cpnVw"
+                        android:layout_width="match_parent"
+                        android:layout_height=".8dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/colorAddBgStroke" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Pay Deposit"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/depositeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Deposit $ 0"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/textNormalSize" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:background="@color/colorAddBgStroke" />
+
+
+                <RelativeLayout
+                    android:id="@+id/extraChargesLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Extra Charges"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+
+                    <FrameLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/blue_circle">
+
+                        <ImageView
+                            android:id="@+id/extraBtn"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/plus_icon" />
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:background="@color/colorAddBgStroke" />
+
+                <RelativeLayout
+                    android:id="@+id/extraLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Total Extra Part Charges"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/exPartChargeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="$ 0"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/exPartChargeTxt"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Total Extra Labor Charges"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/exLaborChargeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/exPartChargeTxt"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="$ 0"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/exLaborChargeTxt"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Total Extra Flat Charges"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/exFlateChargeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/exLaborChargeTxt"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="$ 0"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".8dp"
+                        android:layout_below="@id/exFlateChargeTxt"
+                        android:background="@color/colorAddBgStroke" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Rewards"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/rewardsTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rewardsTxt"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Total Amount Pay"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/totalTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/rewardsTxt"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <View
+                        android:id="@+id/totalView"
+                        android:layout_width="match_parent"
+                        android:layout_height=".8dp"
+                        android:layout_below="@id/totalTxt"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/colorAddBgStroke" />
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/askFrPayBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_blue_bg"
+                    android:fontFamily="@font/lato_bold"
+                    android:paddingLeft="@dimen/_35sdp"
+                    android:paddingRight="@dimen/_35sdp"
+                    android:text="Ask For Payment"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textNormalSize"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

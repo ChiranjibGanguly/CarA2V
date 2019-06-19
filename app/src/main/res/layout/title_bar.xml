@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:background="@color/colorPrimaryDarkHome">
+
+        <ImageView
+            android:id="@+id/menuBtn"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/menu_icon"
+            android:visibility="visible"
+            android:padding="@dimen/_5sdp"/>
+        <!--<ImageView
+            android:id="@+id/logOutBtn"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/log_out"
+            android:visibility="gone" />-->
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/raleway_regular"
+            android:text="Title"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textLeargeSize" />
+
+        <ImageView
+            android:id="@+id/tabRightIcon"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/filter"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/tabBlockIcon"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_toLeftOf="@id/tabRightIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/un_block"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

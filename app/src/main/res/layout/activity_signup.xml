@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_260sdp"
+                    android:background="@drawable/welcome_bg"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:src="@drawable/logo" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_260sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/prflImgLay"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true">
+
+                        <com.github.siyamed.shapeimageview.HexagonImageView
+                            android:id="@+id/prflImage"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_120sdp"
+                            android:src="@drawable/user_1"
+                            app:siBorderColor="@color/colorDevider"
+                            app:siBorderWidth="1.5dp" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:src="@drawable/camera" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="@string/welcome_to"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textLeargeSize" />
+
+                <com.cara2v.widgets.MyCustomTextViewAaudiowideRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/car_a2v"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textLeargeSize" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/businessNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@null"
+                android:fontFamily="@font/lato_regular"
+                android:hint="Business Name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueText"
+                android:textColorHint="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+
+            <View
+                android:id="@+id/busiView"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <EditText
+                android:id="@+id/userNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@null"
+                android:fontFamily="@font/lato_regular"
+                android:hint="Username"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueText"
+                android:textColorHint="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <EditText
+                android:id="@+id/userEmailTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@null"
+                android:fontFamily="@font/lato_regular"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueText"
+                android:textColorHint="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <EditText
+                android:id="@+id/passWordTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@null"
+                android:fontFamily="@font/lato_regular"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueText"
+                android:textColorHint="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+
+            <View android:id="@+id/pwdView"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <TextView
+                    android:id="@+id/addressTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Address"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlueText"
+                    android:textColorHint="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.0">
+
+                    <fragment
+                        android:id="@+id/placeAddressFragment"
+                        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <TextView
+                    android:id="@+id/spinCountryCode"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/colorBlueText"
+                    android:textColorHint="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/drop_down_icon" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:background="@color/colorDevider" />
+
+                <EditText
+                    android:id="@+id/userphnNumTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Contact Number"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlueText"
+                    android:textColorHint="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <TextView
+                android:id="@+id/licenceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@null"
+                android:fontFamily="@font/lato_regular"
+                android:text="Add Licence"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueText"
+                android:textColorHint="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+
+            <View
+                android:id="@+id/licenceView"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <CheckBox
+                    android:id="@+id/checkTrmsPolcs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="I accept "
+                    android:textColor="@color/colorInActiveText"
+                    android:textSize="@dimen/textSmallSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/terms_n_policies"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+                <!--mTextView.setText(Html.fromHtml(htmlString));-->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_60sdp"
+                android:layout_marginRight="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rounded_corner_blue_bg"
+                android:fontFamily="@font/lato_regular"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textNormalSize" />
+
+            <LinearLayout
+                android:id="@+id/signInLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Already have an account ?"
+                    android:textColor="@color/colorInActiveText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:fontFamily="@font/lato_black"
+                    android:text="Sign In"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

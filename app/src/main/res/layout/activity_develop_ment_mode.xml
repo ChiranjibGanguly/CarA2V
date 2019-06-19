@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cara2v.ui.activity.DevelopMentModeActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Home"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textMediamSize" />
+
+    <Button
+        android:id="@+id/logOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textMediamSize" />
+</RelativeLayout>

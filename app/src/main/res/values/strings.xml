@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">CarA2V</string>
+    <string name="auto_buisness_owner">Auto Buisness \n  Owner</string>
+    <string name="terms_n_policies"><u>Terms &amp; Policies</u></string>
+    <string name="development_mode">On development mode....</string>
+    <string name="placeApiKey">AIzaSyD02FOlPqakKg6EXmlfJqXaqihbjjpk5wo</string>
+
+    <string name="text_take_photo">Take Photo</string>
+    <string name="text_chose_gellery">From Gallery</string>
+    <string name="text_add_photo">Add Photo</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="car_a2v">CAR A2V</string>
+    <string name="welcome_to">Welcome To</string>
+
+    <string name="facebook_app_id">155309168422831</string>
+    <string name="fb_login_protocol_scheme">fb155309168422831</string>
+    <!--<string name="facebook_app_id">1724386664261932</string>
+    <string name="fb_login_protocol_scheme">1724386664261932</string>-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Tab Name-->
+    <!--consumer-->
+    <!--SliderTab-->
+    <string name="consumer_fst_sl_tab">Profile</string>
+    <string name="consumer_snd_sl_tab">Near By</string>
+    <string name="consumer_rd_sl_tab">Friends</string>
+    <string name="consumer_frth_sl_tab">Chat</string>
+    <string name="consumer_fifth_sl_tab">Feedback</string>
+    <string name="consumer_sxth_sl_tab">About us</string>
+    <string name="consumer_svnth_sl_tab">Terms and policies</string>
+    <string name="consumer_eth_sl_tab">Logout</string>
+    <!--Tab-->
+    <string name="consumer_fst_tab">NewsFeeds</string>
+    <string name="consumer_snd_tab">Online Services</string>
+    <string name="consumer_rd_tab">Profile</string>
+    <string name="consumer_frth_tab">My Services</string>
+    <string name="consumer_fifth_tab">Notifications</string>
+    <!--Owner-->
+    <!--SliderTab-->
+    <string name="owner_fst_sl_tab">Profile</string>
+    <string name="owner_snd_sl_tab">Friends</string>
+    <string name="owner_rd_sl_tab">Chat</string>
+    <string name="owner_frth_sl_tab">Add Account Info</string>
+    <string name="owner_fifth_sl_tab">Promo Code</string>
+    <string name="owner_sxth_sl_tab">Feedback</string>
+    <string name="owner_svnth_sl_tab">Terms and policies</string>
+    <string name="owner_eth_sl_tab">Logout</string>
+    <!--Tab-->
+    <string name="owner_fst_tab">NewsFeeds</string>
+    <string name="owner_snd_tab">Online Jobs</string>
+    <string name="owner_rd_tab">Profile</string>
+    <string name="owner_frth_tab">My Jobs</string>
+    <string name="owner_fifth_tab">Notifications</string>
+    <string name="addVecInfoHeader">You can add your vehicle info\n for service request</string>
+    <string name="addServiceInfoHeader">You can select your services\nfor your business profile</string>
+    <string name="vehicleAddSuccess">your vehicle added for services request</string>
+    <string name="drop_off_date_and_time">Drop Off Date</string>
+    <string name="dateTxt">Monday\n Nov 20, 2018, 03:30 PM</string>
+    <string name="add_bank_account_Txt">Since you didn\'t add your bank account\nPlease add account details</string>
+    <string name="add_bank_account_details_Txt">You have not added bank account\nyet, Please add.</string>
+    <string name="notificatioAccept">Accept</string>
+    <string name="card">Card/\nBank Account</string>
+    <string name="paymentalarttext">Are you sure you want to pay\nin cash?</string>
+    <string name="forget_pwd_txt">Please insert your registered\n email id to get password</string>
+
+    <!--Image Cropper-->
+    <string name="pick_image_intent_text">Choose an image</string>
+    <string name="crop_image_activity_title">Crop Image</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="result_image_desc">crop result</string>
+
+    <string name="menu1"> Camera </string>
+    <string name="menu2"> Gallery </string>
+    <string name="drop_arrow"> \u0020 &#9698; \u0020\u0020</string>
+</resources>

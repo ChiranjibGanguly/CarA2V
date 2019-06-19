@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/btnCard"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:background="@drawable/blue_left_btn_bg"
+                android:text="Card"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_regular"/>
+
+            <Button
+                android:id="@+id/btnBank"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:background="@drawable/white_right_btn_bg"
+                android:text="Bank Account"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDarkHome"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato_regular"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/containerFrm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+    </LinearLayout>
+</LinearLayout>

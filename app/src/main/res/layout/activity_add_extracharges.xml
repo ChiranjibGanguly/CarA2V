@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/quotedRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/colorAddBgStroke" />
+
+
+            <RelativeLayout
+                android:id="@+id/bellowLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Total Part Charges"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/partChargeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="$ 0"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/partChargeTxt"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Total Labor Charges"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/laborChargeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/partChargeTxt"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="$ 0"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/laborChargeTxt"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Total Flat Charges"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/flateChargeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/laborChargeTxt"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="$ 0"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+<RelativeLayout
+    android:id="@+id/taxComsnLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/flateChargeTxt">
+                <View
+                    android:id="@+id/labView"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/colorAddBgStroke" />
+
+                <TextView
+                    android:id="@+id/tax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labView"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Tax"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tax"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="It will apply on part charge only"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textExtraSmallSize" />
+
+                <LinearLayout
+                    android:id="@+id/taxLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/labView"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp">
+
+                    <TextView
+                        android:id="@+id/taxTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:padding="@dimen/_2sdp"
+                        android:text="6"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorOrange" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textNormalSize" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/taxView"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@id/txt"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorAddBgStroke" />
+
+
+                <TextView
+                    android:id="@+id/comision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/taxView"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Commission"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/comision"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="It will apply on labor and flat charge"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textExtraSmallSize" />
+
+                <TextView
+                    android:id="@+id/comissionTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/taxView"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="0 %"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+</RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "198727332847",
+    "firebase_url": "https://cara2v-5ef3a.firebaseio.com",
+    "project_id": "cara2v-5ef3a",
+    "storage_bucket": "cara2v-5ef3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198727332847:android:69701b4bdaf24cdf",
+        "android_client_info": {
+          "package_name": "com.cara2v"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198727332847-gjh52eqvqj8pbn5vfp91g9krlra7r706.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cara2v",
+            "certificate_hash": "da1a956ea030b06b9a32c0164bd02464bd4eeb46"
+          }
+        },
+        {
+          "client_id": "198727332847-d3uheg5uvp5lv1nukuhufgtv14na0hkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD02FOlPqakKg6EXmlfJqXaqihbjjpk5wo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198727332847-d3uheg5uvp5lv1nukuhufgtv14na0hkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

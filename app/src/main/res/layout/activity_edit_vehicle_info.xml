@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/addVecInfoHeader"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textMediamSize" />
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Vechile Name"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+
+            <EditText
+                android:id="@+id/vehNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_cr_txt_bg"
+                android:fontFamily="@font/lato_regular"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/colorInActiveText" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Brand"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/brandLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/rounded_cr_txt_bg">
+
+                        <Spinner
+                            android:id="@+id/spinnBrand"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:dropDownHeight="100dp"
+                            android:focusable="true"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Model"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/modelLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/rounded_cr_txt_bg">
+
+                        <Spinner
+                            android:id="@+id/spinnModel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Vehicle year"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/caryearTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/rounded_cr_txt_bg"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="center_vertical"
+                        android:hint="Select year"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@color/colorInActiveText"
+                        android:textSize="@dimen/textSmallSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Mileage"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <EditText
+                        android:id="@+id/mileageTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/rounded_cr_txt_bg"
+                        android:fontFamily="@font/lato_regular"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@color/colorInActiveText"
+                        android:textSize="@dimen/textSmallSize" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="VIN Code"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <RadioGroup
+                    android:id="@+id/vinRadioGr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity=""
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/privateVin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_radio_button"
+                        android:checked="true"
+                        android:text=" Private"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <RadioButton
+                        android:id="@+id/publicVin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:button="@drawable/custom_radio_button"
+                        android:text=" Public"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/vinCodeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_cr_txt_bg"
+                android:fontFamily="@font/lato_regular"
+                android:imeOptions="actionNext"
+                android:paddingLeft="@dimen/_5sdp"
+                android:singleLine="true"
+                android:inputType="text|textCapCharacters"
+                android:textColor="@color/colorInActiveText"
+                android:textSize="@dimen/textSmallSize"
+                android:maxLength="17"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Plate Number"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <RadioGroup
+                    android:id="@+id/plateRadioGr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity=""
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/privatePlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_radio_button"
+                        android:checked="true"
+                        android:text=" Private"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <RadioButton
+                        android:id="@+id/publicPlate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:button="@drawable/custom_radio_button"
+                        android:text=" Public"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/plateNoTxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_cr_txt_bg"
+                android:fontFamily="@font/lato_regular"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/colorInActiveText"
+                android:textSize="@dimen/textSmallSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="VehicleType"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/vehicleTypeLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/rounded_cr_txt_bg">
+
+                        <Spinner
+                            android:id="@+id/spinnVehicleType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Fuel Type"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/fuelTypeLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/rounded_cr_txt_bg">
+
+                        <Spinner
+                            android:id="@+id/spinnFuelType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:focusable="true"
+                            android:overlapAnchor="false"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Upload Image"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/addVechileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnAddDetails"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_corner_blue_bg"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Add Details"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <Button
+                    android:id="@+id/btnSkip"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_blue_bg"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Skip"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textNormalSize" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

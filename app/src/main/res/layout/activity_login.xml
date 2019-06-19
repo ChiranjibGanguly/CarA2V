@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:background="@drawable/welcome_bg"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="Welcome To "
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textLeargeSize" />
+
+                <com.cara2v.widgets.MyCustomTextViewAaudiowideRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="CAR A2V"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textLeargeSize" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/userNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@null"
+                android:hint="Username"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueText"
+                android:textColorHint="@color/colorBlueText"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="@dimen/textNormalSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <EditText
+                android:id="@+id/passWordTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@null"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/colorBlueText"
+                android:textColorHint="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize"
+                android:fontFamily="@font/lato_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/colorDevider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <CheckBox
+                    android:id="@+id/checkSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Always Sign in"
+                    android:textColor="@color/colorInActiveText"
+                    android:textSize="@dimen/textTabSize" />
+
+                <TextView
+                    android:id="@+id/forgotPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Forgot Password?"
+                    android:textSize="@dimen/textTabSize" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_70sdp"
+                android:layout_marginRight="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rounded_corner_blue_bg"
+                android:fontFamily="@font/lato_regular"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textNormalSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="1dp"
+                    android:layout_weight=".42"
+                    android:background="@color/colorDevider" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".16"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="OR"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorInActiveText"
+                    android:textSize="@dimen/textMediamSize" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="1dp"
+                    android:layout_weight=".42"
+                    android:background="@color/colorDevider" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Signin With"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textMediamSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnFbLogIn"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:src="@drawable/facebook" />
+
+                <ImageView
+                    android:id="@+id/btnGLogIn"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:src="@drawable/google" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signUpLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="New to A2V ?"
+                    android:textColor="@color/colorInActiveText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_black"
+                    android:text="Sign Up"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

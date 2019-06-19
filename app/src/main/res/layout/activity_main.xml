@@ -1,0 +1,57 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@drawable/home_bg">
+    <RelativeLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/footer"
+            layout="@layout/tab_layout" />
+
+        <FrameLayout
+            android:id="@+id/fragmentPlace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/footer"
+            android:layout_below="@id/title" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coOrdinateLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragmentPlace"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/navigationView"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorTransparent"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_15sdp">
+
+        <include
+            layout="@layout/navigtion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/welcome_bg"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="@dimen/_35sdp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="Welcome To "
+            android:textColor="@color/colorBlueText"
+            android:textSize="@dimen/textLeargeSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="CAR A2V"
+            android:textColor="@color/colorBlueText"
+            android:textSize="@dimen/textLeargeSize"
+            android:fontFamily="@font/audiowide_regular"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Let your problem be our problem."
+        android:textColor="@color/colorBlueText"
+        android:textSize="@dimen/textNormalSize" />
+
+   <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:text="Who are you?"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textNormalSize" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/ownerLay"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ownerImg"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@drawable/owner" />
+
+            <TextView
+                android:id="@+id/ownerTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:text="@string/auto_buisness_owner"
+                android:textColor="@color/colorInActiveText"
+                android:textSize="@dimen/textNormalSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/consumerLay"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/consumerImg"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@drawable/active_consumer" />
+
+            <TextView
+                android:id="@+id/consumerTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:text="Consumer"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textNormalSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

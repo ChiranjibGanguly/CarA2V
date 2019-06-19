@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorProfileBg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_1sdp"
+    android:paddingRight="@dimen/_3sdp"
+    android:paddingTop="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:elevation="@dimen/_2sdp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:id="@+id/containerLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp">
+
+                    <TextView
+                        android:id="@+id/serviveHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_60sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Auto glass"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <ImageButton
+                        android:id="@+id/arrowBtn"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/down_arrow_service" />
+
+                    <ImageButton
+                        android:id="@+id/infoBtn"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toLeftOf="@id/arrowBtn"
+                        android:background="@drawable/info_sign" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/subView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="@color/colorAddBgStroke" />
+
+                        <ListView
+                            android:id="@+id/subList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@android:color/transparent"
+                            android:listSelector="@android:color/transparent"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+                        <Button
+                            android:id="@+id/addRemoveBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="end"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/rounded_corner_blue_bg"
+                            android:text="Add in service"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textTabSize" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:background="@drawable/service_bg">
+
+        <ImageView
+            android:id="@+id/serviceItemImage"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</RelativeLayout>

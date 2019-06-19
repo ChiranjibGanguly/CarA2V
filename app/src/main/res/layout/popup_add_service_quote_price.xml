@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/veichal_type_pop_up_bg">
+
+            <TextView
+                android:id="@+id/popTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Add Service Price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textNormalSize" />
+
+            <ImageButton
+                android:id="@+id/popCancel"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bellowLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/veichal_type_pop_dn_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingTop="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/subServiceTitleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:text="Change Rear Window Glass"
+                android:textColor="@color/OnlnServiceTxt"
+                android:textSize="@dimen/textNormalSize" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/checkFlat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:button="@drawable/custom_radio_button"
+                android:fontFamily="@font/lato_regular"
+                android:text="   Add Flat Price"
+                android:textColor="@color/OnlnServiceTxt"
+                android:textSize="@dimen/textSmallSize" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/partLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/part"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="Part:"
+                            android:textColor="@color/OnlnServiceTxt"
+                            android:textSize="@dimen/textNormalSize" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp">
+
+                            <LinearLayout
+                                android:id="@+id/parttLay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$"
+                                    android:textColor="@color/colorOrange"
+                                    android:textSize="@dimen/textNormalSize" />
+
+                                <EditText
+                                    android:id="@+id/partEdTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="@dimen/_3sdp"
+                                    android:background="@null"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:minWidth="@dimen/_20sdp"
+                                    android:text=""
+                                    android:textColor="@color/colorOrange"
+                                    android:textCursorDrawable="@drawable/curser"
+                                    android:textSize="@dimen/textNormalSize" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="1dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/parttLay"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:background="@color/colorInActiveText" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/labor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="Labor:"
+                            android:textColor="@color/OnlnServiceTxt"
+                            android:textSize="@dimen/textNormalSize" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp">
+
+                            <LinearLayout
+                                android:id="@+id/laborrLay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$"
+                                    android:textColor="@color/colorOrange"
+                                    android:textSize="@dimen/textNormalSize" />
+
+                                <EditText
+                                    android:id="@+id/laborEdTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_3sdp"
+                                    android:background="@null"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:minWidth="@dimen/_20sdp"
+                                    android:text=""
+                                    android:textColor="@color/colorOrange"
+                                    android:textCursorDrawable="@drawable/curser"
+                                    android:textSize="@dimen/textNormalSize" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="1dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/laborrLay"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:background="@color/colorInActiveText" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Description"
+                        android:textColor="@color/OnlnServiceTxt"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <EditText
+                        android:id="@+id/partRemarkTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:background="@drawable/service_item_req_bg"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:hint="maximam 100 character"
+                        android:maxLength="100"
+                        android:minHeight="@dimen/_40sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/OnlnServiceTxt"
+                        android:textColorHint="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/flatPriceLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/flatPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="Flat Price:"
+                            android:textColor="@color/OnlnServiceTxt"
+                            android:textSize="@dimen/textNormalSize" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp">
+
+                            <LinearLayout
+                                android:id="@+id/flattPriceLay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toLeftOf="@id/flatPriceEdTxt"
+                                    android:text="$"
+                                    android:textColor="@color/colorOrange"
+                                    android:textSize="@dimen/textNormalSize" />
+
+                                <EditText
+                                    android:id="@+id/flatPriceEdTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="@dimen/_3sdp"
+                                    android:background="@null"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:minWidth="@dimen/_20sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorOrange"
+                                    android:textCursorDrawable="@drawable/curser"
+                                    android:textSize="@dimen/textNormalSize" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="1dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/flattPriceLay"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:background="@color/colorInActiveText" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Description"
+                        android:textColor="@color/OnlnServiceTxt"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <EditText
+                        android:id="@+id/flatRemarkTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:background="@drawable/service_item_req_bg"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:hint="maximam 100 character"
+                        android:maxLength="100"
+                        android:minHeight="@dimen/_40sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/OnlnServiceTxt"
+                        android:textColorHint="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/addPriceBtn"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/edittxt_fill_bg"
+                android:text="Add Price"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

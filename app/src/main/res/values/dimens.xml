@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textExtraSmallSize">@dimen/_8sdp</dimen>
+    <dimen name="textTabSize">@dimen/_10sdp</dimen>
+    <dimen name="textSmallSize">@dimen/_12sdp</dimen>
+    <dimen name="textNormalSize">@dimen/_14sdp</dimen>
+    <dimen name="textMediamSize">@dimen/_16sdp</dimen>
+    <dimen name="textLeargeSize">@dimen/_18sdp</dimen>
+    <dimen name="textSlideSize">@dimen/_17sdp</dimen>
+</resources>

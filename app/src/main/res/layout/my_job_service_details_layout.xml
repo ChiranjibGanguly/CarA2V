@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/providerLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2sdp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/buisnessNameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:padding="@dimen/_10sdp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/distanceTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="end"
+                        android:padding="@dimen/_10sdp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textNormalSize" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/mapLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3dp">
+
+                <ImageView
+                    android:id="@+id/mapImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/mapNevBtn"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/distance" />
+
+                <ProgressBar
+                    android:id="@+id/smlProgressBar"
+                    style="@android:style/Widget.Holo.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:progressTint="@color/colorPrimaryDark"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/mapIconLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/location_map" />
+
+                    <TextView
+                        android:id="@+id/mapOwnerTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/priceLay"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".35"
+                    android:background="@color/colorGreen"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Service Price"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/servicePriceTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textMediamSize" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".65"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/dayTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text=""
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/dateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text=""
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/textMediamSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <RelativeLayout
+                android:id="@+id/vehicleInfoLay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Vehicle Info"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/right_side" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <RelativeLayout
+                android:id="@+id/providerInfoLay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/prvInfoTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Provider Info"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/right_side" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <RelativeLayout
+                android:id="@+id/reqStLay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Request Status"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/reqStTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/lato_regular"
+                    android:text=""
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/textNormalSize" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <RelativeLayout
+                android:id="@+id/payDepositeLay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Pay Deposit"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/payDepositeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text=""
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/payDepositeStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/payDepositeTxt"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text=""
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/textNormalSize" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/dipositeView"
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <RelativeLayout
+                android:id="@+id/msgLay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Message"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/right_side" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <RelativeLayout
+                android:id="@+id/serviceChargeLay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Service Charges"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/right_side" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <RelativeLayout
+                android:id="@+id/adminLay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Admin Commission"
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+
+                <TextView
+                    android:id="@+id/adminComTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text=""
+                    android:textColor="@color/colorBlueText"
+                    android:textSize="@dimen/textNormalSize" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/adminView"
+                android:layout_width="match_parent"
+                android:layout_height=".8dp"
+                android:background="@color/colorInActiveText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Description"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textSmallSize" />
+
+            <TextView
+                android:id="@+id/descriptionTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/lato_regular"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSmallSize" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/visibleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:alpha=".8"
+        android:background="@color/white"
+        android:visibility="visible"></LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

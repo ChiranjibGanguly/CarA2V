@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/Interface/ChatAdapterClickListner.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/adapter/AddImageAdapter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/adapter/ViewPagerAdapter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/animation/ZoomOutPageTransformer.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/chat/ChatFragment.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/chat/ChatRecyclerAdapter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/fcm_services/MyFirebaseInstanceIDService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/fcm_services/MyFirebaseMessagingService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/ui/activity/CropActivity.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/util/Constant.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/util/ImageUtil.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/vollyemultipart/AppHelper.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/vollyemultipart/LruBitmapCache.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/vollyemultipart/VolleyMultipartRequest.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/vollyemultipart/VolleySingleton.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/widgets/MyCustomTextViewAaudiowideRegular.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/zoomage/AutoResetMode.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/cara2v/zoomage/ZoomageView.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/master_card_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/visa_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/master_card_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/visa_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/master_card_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/visa_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/master_card_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/visa_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/master_card_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/visa_icon.png" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/white_circle_bg.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/crop.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_chat.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item_view_pager.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/zoom_image.xml" charset="windows-1251" />
+  </component>
+</project>

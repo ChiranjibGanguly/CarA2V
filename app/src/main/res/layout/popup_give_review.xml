@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/veichal_type_pop_up_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Review"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textNormalSize" />
+
+            <ImageButton
+                android:id="@+id/popCancel"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/containerLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/veichal_type_pop_dn_bg"
+            android:orientation="vertical"
+
+            android:paddingTop="@dimen/_15sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/ownLay"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".49"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ownImage"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/user_place_holder" />
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/ownRating"
+                        style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/ownName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Ross Falloni"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize"
+                        android:textAlignment="center"/>
+
+                    <!--<TextView
+                        android:id="@+id/ownType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="(Shop Owner)"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textTabSize" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".02">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/colorInActiveText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/oopoLay"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".49"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/oppoImage"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/user_place_holder" />
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/oppoRating"
+                        style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:numStars="5"
+                        android:stepSize=".05" />
+
+                    <TextView
+                        android:id="@+id/oppoName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Ross Fallon"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <!--<TextView
+                        android:id="@+id/oppoType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="(Shop Owner)"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textTabSize" />-->
+
+                    <TextView
+                        android:id="@+id/askForReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Ask For Review"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/service_item_req_bg"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/sendFrm"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_5sdp" android:src="@drawable/send_button">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/innerLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/sendFrm">
+                    <!--<EditText
+                        android:id="@+id/rattingCommentTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="Add Your Comment"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/colorBlueText"
+                        android:textColorHint="@color/colorInActiveText"
+                        android:textSize="@dimen/textTabSize" />-->
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/dlproBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

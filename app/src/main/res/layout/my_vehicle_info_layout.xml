@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:layout_marginTop="-2dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="false"
+                    android:focusable="false">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/vehicle_details_bg" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:padding="@dimen/_10sdp">
+
+
+                        <TextView
+                            android:id="@+id/brandName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="TERRANO"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textNormalSize" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/viewPagerIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/viewPagerCountDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/leftLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <FrameLayout
+                        android:id="@+id/leftFrem"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:background="@drawable/white_circle_bg"
+                        android:clickable="false"
+                        android:focusable="false">
+
+                        <ImageButton
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/previous_image"
+                            android:clickable="false"
+                            android:focusable="false" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rightLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <FrameLayout
+                        android:id="@+id/rightFrem"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/white_circle_bg"
+                        android:clickable="false"
+                        android:focusable="false">
+
+                        <ImageButton
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/next_image"
+                            android:clickable="false"
+                            android:focusable="false" />
+                    </FrameLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/brandNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/brandName"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Nissan"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textNormalSize" />
+
+            <TextView
+                android:id="@+id/modelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/brandName"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Terrano 2017"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/textSmallSize" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Mileage"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:id="@+id/mileageTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="5000"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mileageTxt"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Fuel Type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:id="@+id/fulTypeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/mileageTxt"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Diesel"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fulTypeTxt"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Vehicle Type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:id="@+id/vehicleTypeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/fulTypeTxt"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="SUV"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vehicleTypeTxt"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Vehicle Year"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSmallSize"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/vehicleYearTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/vehicleTypeTxt"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Not available"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:cardElevation="@dimen/_3sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="VIN Number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSmallSize"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/vinCodeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text=""
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/plateNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vinCodeTxt"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Plate Number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:id="@+id/vehicleNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/vinCodeTxt"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="N/A"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textSmallSize" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/historyHeaderLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_8sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="View Service History"
+
+                            android:textColor="@color/colorBlueText"
+                            android:textSize="@dimen/textNormalSize" />
+
+                        <ImageView
+                            android:id="@+id/historyArrowBtn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:src="@drawable/down_arrow_service" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/historyLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height=".8dp"
+                            android:background="@color/colorInActiveText" />
+
+                        <TextView
+                            android:id="@+id/noRecordTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="No record found"
+                            android:textColor="@color/colorBlueText"
+                            android:textSize="@dimen/textNormalSize"
+                            android:visibility="gone" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/cmpltSerRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:layoutManager="LinearLayoutManager" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#16222a</color>
+    <color name="colorPrimaryDarkHome">#3a6073</color>
+    <!--<color name="colorBlueText">#3F51B5</color>-->
+    <color name="colorBlueText">#385c6e</color>
+    <color name="colorPrimaryDark">#16222a</color>
+    <color name="colorAccent">#16222a</color>
+    <color name="colorInActiveText">#828282</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDevider">#bbbbbb</color>
+    <color name="colorProfileBg">#f2f2f2</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorUpImBg">#efeaea</color>
+    <color name="colorAddBgStroke">#80385c6e</color>
+
+    <!--OnlineJobsColor-->
+    <color name="colorOrange">#ff8100</color>
+    <color name="colorGreen">#3ea33b</color>
+    <color name="colorBlue">#3f8be0</color>
+    <color name="OnlnServiceTxt">#333333</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparentWhite">#CCffffff</color>
+    <color name="chatOtherBg">#FFE7E3E0</color>
+    <color name="colorCardWindowPopup">#00409a</color>
+
+</resources>

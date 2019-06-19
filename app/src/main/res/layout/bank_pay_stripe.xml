@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/_10sdp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/showTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/lato_regular"
+                android:text="You have not added Bank account\n yet, Please add."
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDarkHome"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Account Holder Name"
+                android:textColor="@color/colorPrimaryDarkHome"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/holderName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_corner_paymentfield_bg"
+                android:fontFamily="@font/lato_regular"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/OnlnServiceTxt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Account Number"
+                android:textColor="@color/colorPrimaryDarkHome"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/accNo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_corner_paymentfield_bg"
+                android:fontFamily="@font/lato_regular"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/OnlnServiceTxt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Routing Number"
+                android:textColor="@color/colorPrimaryDarkHome"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/routNo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_corner_paymentfield_bg"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/OnlnServiceTxt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="SSN Last"
+                android:textColor="@color/colorPrimaryDarkHome"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ssnLast"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_corner_paymentfield_bg"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/OnlnServiceTxt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Postal Code"
+                android:textColor="@color/colorPrimaryDarkHome"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/postalCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/rounded_corner_paymentfield_bg"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/OnlnServiceTxt" />
+
+            <Button
+                android:id="@+id/payBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/rounded_corner_blue_bg"
+                android:text="Add Bank Account"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

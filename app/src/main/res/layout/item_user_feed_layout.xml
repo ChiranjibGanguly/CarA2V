@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="1dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="@dimen/_4sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/topLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/itemUserImage"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:src="@drawable/user_place_holder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/itemUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Ellen Jonson"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:id="@+id/iteAgoTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="1 Day ago"
+                        android:textColor="@color/OnlnServiceTxt"
+                        android:textSize="@dimen/textSmallSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/feedLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topLay"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/itemCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caption"
+                    android:textColor="@color/OnlnServiceTxt"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/itemPostTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="fdfhfd fd  jdjgfidjgfdjgfdjgfdgfjd jifdjgfidgj ifdjg fidj gfiodgjfidgjfid ggj io io giofgjfiodjg fiodfdgj odgj fiod gjfodj iofd fiodj fd jfdijgijg iojgifdjg fdigj fdiogjiofdjg fiodgjfiod iodgj fiod gjfiod jiogj fiod iojfdiogjfdgjfidjg iojg ioj giojgiodf j  gjiog j hfghgf hfg h fgh hfghfg fghfg fgh fgfghfg"
+                    android:textColor="@color/colorInActiveText"
+                    android:textSize="@dimen/textTabSize"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/itemPostImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/place_holder"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+                    <TextView
+                        android:id="@+id/itemLikeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="40"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Like"
+                        android:textColor="@color/OnlnServiceTxt"
+                        android:textSize="@dimen/textSmallSize" />
+
+                    <TextView
+                        android:id="@+id/itemCommentCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="30"
+                        android:textColor="@color/colorBlueText"
+                        android:textSize="@dimen/textNormalSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Comments"
+                        android:textColor="@color/OnlnServiceTxt"
+                        android:textSize="@dimen/textSmallSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/likeLay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/isLikeImg"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/like_light" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="Like"
+                            android:textColor="@color/OnlnServiceTxt"
+                            android:textSize="@dimen/textSmallSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/commentLay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/comment_light" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="Comment"
+                            android:textColor="@color/OnlnServiceTxt"
+                            android:textSize="@dimen/textSmallSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shareLay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/share_light" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="Share"
+                            android:textColor="@color/OnlnServiceTxt"
+                            android:textSize="@dimen/textSmallSize" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

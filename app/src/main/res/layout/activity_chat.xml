@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorProfileBg"
+        android:padding="@dimen/_10sdp">
+
+        <FrameLayout
+            android:id="@+id/send"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+
+            android:background="@drawable/blue_circle">
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:src="@drawable/sent" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@id/send"
+            android:background="@drawable/chat_txt_bg"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingTop="@dimen/_3sdp">
+
+            <ImageView
+                android:id="@+id/image_button"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:src="@drawable/camera_icon" />
+
+            <EditText
+                android:id="@+id/edit_text_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_toLeftOf="@id/image_button"
+                android:background="@color/white"
+                android:fontFamily="@font/lato_regular"
+                android:hint="Type here...."
+                android:inputType="textMultiLine"
+                android:maxLines="2"
+                android:padding="@dimen/_3sdp"
+                android:text="" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_buttom"
+        android:layout_below="@+id/title"
+        app:layoutManager="LinearLayoutManager" />
+
+
+    <TextView
+        android:id="@+id/noDataTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/lato_regular"
+        android:text="No chat found yet"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textNormalSize"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+</RelativeLayout>
