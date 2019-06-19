@@ -72,8 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TabLayout tabLay;
     private TextView titleTxt;
     private CoordinatorLayout coOrdinateLay;
-//ccsds
-    //tab
+
     private RelativeLayout firstTabLay;
     private ImageView firstTabImage;
     private RelativeLayout secondTabLay;
