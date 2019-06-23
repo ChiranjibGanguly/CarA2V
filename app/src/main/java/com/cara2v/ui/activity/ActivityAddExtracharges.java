@@ -161,10 +161,7 @@ public class ActivityAddExtracharges extends Activity implements View.OnClickLis
                     if (String.valueOf(subServiceBean.get_id()).equals(jsonBean.getId())) {
                         quotedSubServiceBean.setId(String.valueOf(subServiceBean.get_id()));
                         quotedSubServiceBean.setName(String.valueOf(subServiceBean.getSubServiceName()));
-                        /*quotedSubServiceBean.setPrice("0");
-                        quotedSubServiceBean.setParts("0");
-                        quotedSubServiceBean.setFlatPrice("0");
-                        quotedSubServiceBean.setFlatRemark("");*/
+
                         for (QuotedSubservice quotedSubservice : prevQuotedSubservices) {
                             if (quotedSubServiceBean.getId().equals(quotedSubservice.getId())) {
                                 float flatePriceCom = (Float.parseFloat(quotedSubservice.getFlatPrice()) * adminComision) / 100;
